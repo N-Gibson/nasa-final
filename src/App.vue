@@ -26,7 +26,13 @@ export default {
   methods: {
     selectDate(date) {
       this.date = date;
+      this.selectNewPhotoOnDate();
     },
+    selectNewPhotoOnDate() {
+      dailyImage(this.date)
+      .then(res => this.dailyImage = res)
+      .catch(error => console.error(error))
+    }
   },
   mounted() {
     dailyImage()
