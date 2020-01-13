@@ -21,5 +21,7 @@ export default {
 </script>
 
 <style>
-
+.form {
+  width: 35%;
+}
 </style>
