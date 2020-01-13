@@ -1,17 +1,21 @@
 <template>
   <div id="app">
+    <h1>NASA's Photo of the Day</h1>
+    <Form/>
     <DailyPhoto v-bind:photo="dailyImage"/>
   </div>
 </template>
 
 <script>
 import DailyPhoto from './components/DailyPhoto.vue'
+import Form from './components/Form.vue'
 import { dailyImage } from '../apiCalls'
 
 export default {
   name: 'app',
   components: {
-    DailyPhoto
+    DailyPhoto,
+    Form
   },
   data() {
     return {
