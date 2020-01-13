@@ -10,7 +10,7 @@ export default {
   name: 'DailyPhoto',
   props: {
     photo: {},
-  }
+  },
 }
 </script>
 
