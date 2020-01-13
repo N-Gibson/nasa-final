@@ -1,7 +1,9 @@
 <template>
   <div class="daily-photo">
+    <h2>Title: {{ this.photo.title }}</h2>
     <img v-bind:src="photo.url"/>
-    <p>{{ this.photo }}</p>
+    <p>Date: {{ this.photo.date }}</p>
+    <p>Explanation: {{ this.photo.explanation }}</p>
   </div>
 </template>
 

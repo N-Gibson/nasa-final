@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>NASA's Photo of the Day</h1>
-    <Form v-on:dateSelection="selectDate"/>
+    <div class="header-content">
+      <h1>NASA's Photo of the Day</h1>
+      <Form v-on:dateSelection="selectDate"/>
+    </div>
     <DailyPhoto v-bind:photo="dailyImage"/>
   </div>
 </template>
