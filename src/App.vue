@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <DailyPhoto v-bind:photo="dailyImage"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DailyPhoto from './components/DailyPhoto.vue'
+import { dailyImage } from '../apiCalls'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    DailyPhoto
+  },
+  data() {
+    return {
+      dailyImage: {},
+    }
+  },
+  mounted() {
+    dailyImage()
+      .then(res => this.dailyImage = res)
+      .catch(error => console.error(error))
   }
 }
 </script>
