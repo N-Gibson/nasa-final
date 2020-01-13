@@ -1,7 +1,7 @@
 <template>
   <div class="form">
     <h2>Select a date to view a different daily photo!</h2>
-    <input type="date" v-model="userDate"/>
+    <input type="date" v-model="userDate" v-on:change="dateToApp"/>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     return {
       userDate: '',
     }
+  },
+  methods: {
+    dateToApp(event) {
+      this.$emit('dateSelection', this.userDate)
+    },
   },
 }
 </script>

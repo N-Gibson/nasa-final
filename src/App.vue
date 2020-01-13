@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>NASA's Photo of the Day</h1>
-    <Form/>
+    <Form v-on:dateSelection="selectDate"/>
     <DailyPhoto v-bind:photo="dailyImage"/>
   </div>
 </template>
@@ -20,7 +20,13 @@ export default {
   data() {
     return {
       dailyImage: {},
+      date: '',
     }
+  },
+  methods: {
+    selectDate(date) {
+      console.log(date);
+    },
   },
   mounted() {
     dailyImage()
