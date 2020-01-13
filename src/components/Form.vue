@@ -21,5 +21,14 @@ export default {
 </script>
 
 <style>
+.form {
+  width: 35%;
+}
 
+input {
+  font-size: 1em;
+  padding-left: 50px;
+  text-align: center;
+  width: 50%;
+}
 </style>

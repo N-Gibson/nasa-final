@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>NASA's Photo of the Day</h1>
-    <Form v-on:dateSelection="selectDate"/>
+    <div class="header-content">
+      <h1>NASA's Photo of the Day</h1>
+      <Form v-on:dateSelection="selectDate"/>
+    </div>
     <DailyPhoto v-bind:photo="dailyImage"/>
   </div>
 </template>
@@ -47,5 +49,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  padding-left: 10px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
