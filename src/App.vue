@@ -9,7 +9,7 @@
 <script>
 import DailyPhoto from './components/DailyPhoto.vue'
 import Form from './components/Form.vue'
-import { dailyImage } from '../apiCalls'
+import { dailyImage, dailyImageOnDate } from '../apiCalls'
 
 export default {
   name: 'app',
@@ -26,13 +26,10 @@ export default {
   methods: {
     selectDate(date) {
       this.date = date;
-      this.selectNewPhotoOnDate();
+      dailyImageOnDate(this.date)
+        .then(res => this.dailyImage = res)
+        .catch(error => console.error(error))
     },
-    selectNewPhotoOnDate() {
-      dailyImage(this.date)
-      .then(res => this.dailyImage = res)
-      .catch(error => console.error(error))
-    }
   },
   mounted() {
     dailyImage()
