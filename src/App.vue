@@ -51,6 +51,10 @@ export default {
   margin-top: 60px;
 }
 
+h1 {
+  padding-left: 10px;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
