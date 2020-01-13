@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     selectDate(date) {
-      console.log(date);
+      this.date = date;
     },
   },
   mounted() {
