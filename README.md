@@ -24,3 +24,7 @@ This project is designed to simulate a code challenge provided by an employer. I
 - To vue live app deployed on Heroku: https://nasa-photo.herokuapp.com/
 
 ## Screenshots
+
+![screencapture-localhost-8080-2020-01-13-21_24_10](https://user-images.githubusercontent.com/49107377/72314174-191d0200-364b-11ea-8f1c-3540cd9b0815.png)
+
+![screencapture-localhost-8080-2020-01-13-21_23_24](https://user-images.githubusercontent.com/49107377/72314179-1b7f5c00-364b-11ea-9a44-6b7d32d4de30.png)
