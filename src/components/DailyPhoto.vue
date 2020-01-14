@@ -39,7 +39,7 @@ export default {
   width: 90vw;
     &:hover {
       box-shadow: 0 4px 8px 0 rgb(59, 59, 59), 0 6px 20px 1px rgb(59, 59, 59);
-      cursor: pointer;
+      cursor: help;
     }
 }
 
