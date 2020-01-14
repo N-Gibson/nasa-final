@@ -1,9 +1,8 @@
 <template>
   <div class="daily-photo">
-    <!-- <h2 class="daily-photo-title"><span class="preface">Title: </span>{{ this.photo.title }}</h2> -->
-    <img class="daily-image" v-bind:src="photo.hdurl"/>
-    <!-- <p class="daily-photo-date"><span class="preface">Date: </span>{{ this.photo.date }}</p>
-    <p class="daily-photo-explanation"><span class="preface">Explanation: </span>{{ this.photo.explanation }}</p> -->
+    <h2 class="daily-photo-title" v-show="show === true"><span class="preface">Title: </span>{{ this.photo.title }}</h2>
+    <img class="daily-image" @mouseover="show = true" @mouseout="show = false" v-bind:src="photo.hdurl"/>
+    <p class="daily-photo-explanation" v-show="show === true"><span class="preface">Explanation: </span>{{ this.photo.explanation }}</p>
   </div>
 </template>
 
@@ -12,17 +11,23 @@ export default {
   name: 'DailyPhoto',
   props: {
     photo: {},
+    show: false,
   },
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .daily-photo {
   grid-area: photo;
 }
 
 .daily-photo-title {
-  padding-left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #fff;
+  left: 100px;
+  padding: 10px;
+  position: absolute;
   text-align: left;
 }
 
@@ -33,15 +38,15 @@ export default {
   width: 90vw;
 }
 
-.daily-photo-date {
-  font-size: 1.2em;
-  padding-left: 10px;
-  text-align: left;
-}
-
 .daily-photo-explanation {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #fff;
   font-size: 1.5em;
+  left: 100px;
+  padding: 10px;
   padding-left: 10px;
+  position: absolute;
   text-align: left;
 }
 
