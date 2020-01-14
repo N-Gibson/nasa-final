@@ -36,10 +36,14 @@ export default {
   height: 90vh;
   margin: auto;
   width: 90vw;
+    &:hover {
+      cursor: pointer;
+    }
 }
 
 .daily-photo-explanation {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  bottom: -60px;
   border-radius: 10px;
   color: #fff;
   font-size: 1.5em;
@@ -47,6 +51,7 @@ export default {
   padding: 10px;
   padding-left: 10px;
   position: absolute;
+  right: 70px;
   text-align: left;
 }
 
