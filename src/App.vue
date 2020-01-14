@@ -54,8 +54,8 @@ export default {
   grid-template-areas:
     'header'
     'photo';
-  height: 100vh;
-  width: 100vw;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 .img-h1 {
@@ -77,7 +77,12 @@ export default {
 }
 
 h1 {
+  color: #fff;
   margin-left: -60px;
   font-size: 1.4em;
+}
+
+html {
+  background-image: url('https://media.giphy.com/media/hsITL773u90X6KprRR/giphy.gif');
 }
 </style>

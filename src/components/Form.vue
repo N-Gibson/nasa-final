@@ -37,6 +37,7 @@ input {
 }
 
 h2 {
+  color: #fff;
   font-size: 1em;
 }
 </style>
