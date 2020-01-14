@@ -20,8 +20,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 35%;
 }
 

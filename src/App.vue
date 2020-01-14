@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <div class="header-content">
-      <h1>NASA's Photo of the Day</h1>
+      <div class="img-h1">
+        <img src="https://i.ya-webdesign.com/images/nasa-logo-transparent-background-png-2.png"/>
+        <h1>'s Photo of the Day</h1>
+      </div>
       <Form v-on:dateSelection="selectDate"/>
     </div>
     <DailyPhoto v-bind:photo="dailyImage"/>
@@ -41,22 +44,32 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
-h1 {
-  padding-left: 10px;
+.img-h1 {
+  align-items: center;
+  display: flex;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
+}
+
+img {
+  box-sizing: border-box;
+  margin-left: -40px;
+  width: 300px;
+}
+
+h1 {
+  margin-left: -90px;
 }
 </style>
