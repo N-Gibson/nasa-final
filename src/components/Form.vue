@@ -20,8 +20,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 35%;
 }
 
@@ -30,5 +34,10 @@ input {
   padding-left: 50px;
   text-align: center;
   width: 50%;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1em;
 }
 </style>
