@@ -1,7 +1,7 @@
 <template>
   <div class="daily-photo">
     <!-- <h2 class="daily-photo-title"><span class="preface">Title: </span>{{ this.photo.title }}</h2> -->
-    <img v-bind:src="photo.url"/>
+    <img class="daily-image" v-bind:src="photo.hdurl"/>
     <!-- <p class="daily-photo-date"><span class="preface">Date: </span>{{ this.photo.date }}</p>
     <p class="daily-photo-explanation"><span class="preface">Explanation: </span>{{ this.photo.explanation }}</p> -->
   </div>
@@ -18,12 +18,19 @@ export default {
 
 <style scoped>
 .daily-photo {
-  /* margin: 0px; */
+  grid-area: photo;
 }
 
 .daily-photo-title {
   padding-left: 10px;
   text-align: left;
+}
+
+.daily-image {
+  display: block;
+  height: 90vh;
+  margin: auto;
+  width: 90vw;
 }
 
 .daily-photo-date {

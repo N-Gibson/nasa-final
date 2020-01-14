@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header-content">
       <div class="img-h1">
-        <img src="https://i.ya-webdesign.com/images/nasa-logo-transparent-background-png-2.png"/>
+        <img class="logo" src="https://i.ya-webdesign.com/images/nasa-logo-transparent-background-png-2.png"/>
         <h1>'s Photo of the Day</h1>
       </div>
       <Form v-on:dateSelection="selectDate"/>
@@ -44,13 +44,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header'
+    'photo';
+  height: 100vh;
+  width: 100vw;
 }
 
 .img-h1 {
@@ -61,11 +66,12 @@ export default {
 .header-content {
   display: flex;
   height: 80px;
+  grid-area: header;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
-img {
+.logo {
   box-sizing: border-box;
   width: 200px;
 }
