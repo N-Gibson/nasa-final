@@ -32,18 +32,20 @@ export default {
 }
 
 .daily-image {
+  border-radius: 5px;
   display: block;
   height: 90vh;
   margin: 0px auto 10px auto;
   width: 90vw;
     &:hover {
+      box-shadow: 0 4px 8px 0 rgb(59, 59, 59), 0 6px 20px 1px rgb(59, 59, 59);
       cursor: pointer;
     }
 }
 
 .daily-photo-explanation {
   background: rgba(0, 0, 0, 0.7);
-  bottom: -50px;
+  bottom: -40px;
   border-radius: 10px;
   color: #fff;
   font-size: 1.5em;
