@@ -7,6 +7,7 @@ This project is designed to simulate a code challenge provided by an employer. I
 - Vue.js
 - NASA API
 - eslint 
+- SCSS
 
 ## Project setup
 
@@ -18,8 +19,8 @@ This project is designed to simulate a code challenge provided by an employer. I
   
   `npm run serve`
   
-  Visit live app at: `localhost:8080`
+  Visit app at: `localhost:8080`
   
-- To vue deployed app go to: 
+- To vue live app deployed on Heroku: https://nasa-photo.herokuapp.com/
 
 ## Screenshots
