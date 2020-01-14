@@ -34,7 +34,7 @@ export default {
 .daily-image {
   border-radius: 5px;
   display: block;
-  height: 90vh;
+  height: 80vh;
   margin: 0px auto 10px auto;
   width: 90vw;
     &:hover {
@@ -45,7 +45,7 @@ export default {
 
 .daily-photo-explanation {
   background: rgba(0, 0, 0, 0.7);
-  bottom: -40px;
+  bottom: 20px;
   border-radius: 10px;
   color: #fff;
   font-size: 1.5em;

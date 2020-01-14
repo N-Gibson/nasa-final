@@ -68,7 +68,7 @@ export default {
   height: 80px;
   grid-area: header;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .logo {
