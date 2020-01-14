@@ -35,4 +35,8 @@ input {
   text-align: center;
   width: 50%;
 }
+
+h2 {
+  font-size: 1em;
+}
 </style>

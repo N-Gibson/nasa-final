@@ -60,16 +60,18 @@ export default {
 
 .header-content {
   display: flex;
+  height: 80px;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 img {
   box-sizing: border-box;
-  margin-left: -40px;
-  width: 300px;
+  width: 200px;
 }
 
 h1 {
-  margin-left: -90px;
+  margin-left: -60px;
+  font-size: 1.4em;
 }
 </style>
