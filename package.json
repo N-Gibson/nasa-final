@@ -5,18 +5,25 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "start": "node server.js"
   },
   "dependencies": {
-    "core-js": "^3.4.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.1.0",
+    "core-js": "^3.6.5",
     "express": "^4.17.1",
-    "vue": "^2.6.10"
+    "jest-serializer-vue": "^2.0.2",
+    "vue": "^2.6.10",
+    "vue-jest": "^3.0.6"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-babel": "^4.4.6",
     "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.4.6",
     "@vue/cli-service": "^4.1.0",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
@@ -37,7 +44,18 @@
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
