@@ -62,6 +62,10 @@ describe('Daily Image On Date Api Call', () => {
         ok: false
       });
     });
-    expect(dailyImageOnDate()).rejects.toEqual(response);
-  })
+    expect(dailyImageOnDate('10/11/2019')).rejects.toEqual(response);
+  });
+
+  it('Should throw an error if there is a problem with the fetch', () => {
+    expect(dailyImageOnDate('10/11/2019')).rejects.toEqual('Error');
+  });
 });
