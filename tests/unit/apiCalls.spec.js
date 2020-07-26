@@ -16,8 +16,8 @@ describe('Api Calls', () => {
     });
   });
 
-  it('Should run a test', () => {
-    expect(true).toBe(true);
+  it('Should return a photo response if fetch is ok', () => {
+    const result = dailyImage();
+    expect(result).resolves.toEqual(mockResponse);
   });
-
 });
