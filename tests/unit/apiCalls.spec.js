@@ -32,4 +32,9 @@ describe('Api Calls', () => {
   it('Should throw an error if there is a problem with the fetch', () => {
     expect(dailyImage()).rejects.toEqual('Error');
   });
+
+  it('Should return a response if fetch is ok', () => {
+    const result = dailyImageOnDate('10/11/2019');
+    expect(result).resolves.toEqual(mockResponse);
+  })
 });
