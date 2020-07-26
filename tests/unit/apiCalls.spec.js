@@ -28,4 +28,8 @@ describe('Api Calls', () => {
     });
     expect(dailyImage()).rejects.toEqual(response);
   });
+
+  it('Should throw an error if there is a problem with the fetch', () => {
+    expect(dailyImage()).rejects.toEqual('Error');
+  });
 });
