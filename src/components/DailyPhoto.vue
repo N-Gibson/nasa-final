@@ -12,7 +12,7 @@ export default {
   props: {
     photo: {},
     show: false,
-  },
+  }
 }
 </script>
 
